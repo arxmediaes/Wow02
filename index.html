@@ -92,7 +92,10 @@
     .cover.opening:not(.video-opening) .film-grade{transition-duration:1.7s}
     @media(max-width:390px){.intro,.invitation-details,.schedule,.rsvp{padding-left:27px;padding-right:27px}.hero h1{font-size:67px}.date-lockup strong{font-size:82px}.program::before,.program::after{left:72px}.timeline-bloom{left:73px}.program li{grid-template-columns:62px 24px 1fr}.choices span{font-size:12px}}
     @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.door,.stage-scene,.cover,.hero-content,.hero-bottom,.knock-ui,.stage-scene::before,.hero-scene::before,.hero-scene,.light-toggle,.motion-ready [data-reveal]{animation:none!important;transition:none!important}.motion-ready [data-reveal]{opacity:1;transform:none}}
-  </style>
+      /* Al abrir, el recorrido ocupa toda la pantalla; la portada mantiene su tamaño. */
+    .invitation{width:100%;max-width:none;margin:0;overflow:hidden}
+    .hero{width:100%;max-width:none}
+</style>
   <noscript><style>.cover{display:none}body.locked{overflow:auto}.hero-content,.hero-bottom{opacity:1}</style></noscript>
 </head>
 <body class="locked">
