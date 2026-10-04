@@ -203,7 +203,7 @@
       knocks++;
       dots[knocks-1].classList.add('active');
       document.getElementById('knockCount').textContent=String(knocks).padStart(2,'0')+' / 03';
-      target.setAttribute('aria-label',knocks<3?`Toca para abrir la puerta. Quedan ${3-knocks} toques`:'Abriendo la puerta');
+      target.setAttribute('aria-label',knocks<3?`Toca para abrir la puerta. ${3-knocks===1?'Queda 1 toque':'Quedan '+(3-knocks)+' toques'}`:'Abriendo la puerta');
       knockSound();
       if(navigator.vibrate)navigator.vibrate(25);
       stage.classList.remove('knocking');void stage.offsetWidth;stage.classList.add('knocking');
